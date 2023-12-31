@@ -240,10 +240,10 @@ echo "Building boost version: $BOOST_VER1.$BOOST_VER2.$BOOST_VER3"
 # Build constants
 # -----------------------
 
-BOOST_DOWNLOAD_LINK=https://github.com/boostorg/boost/releases/download/$BOOST_VER1.$BOOST_VER2.$BOOST_VER3/$BOOST_VER1.$BOOST_VER2.$BOOST_VER3.tar.gz
+BOOST_DOWNLOAD_LINK=https://github.com/boostorg/boost/releases/download/$BOOST_VER1.$BOOST_VER2.$BOOST_VER3/boost-$BOOST_VER1.$BOOST_VER2.$BOOST_VER3.tar.gz
 #BOOST_DOWNLOAD_LINK="https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VER1.$BOOST_VER2.$BOOST_VER3/source/boost_${BOOST_VER1}_${BOOST_VER2}_${BOOST_VER3}.tar.bz2"
-BOOST_TAR="boost_${BOOST_VER1}_${BOOST_VER2}_${BOOST_VER3}.tar.gz"
-BOOST_DIR="boost_${BOOST_VER1}_${BOOST_VER2}_${BOOST_VER3}"
+BOOST_TAR="boost_${BOOST_VER1}.${BOOST_VER2}.${BOOST_VER3}.tar.gz"
+BOOST_DIR="boost_${BOOST_VER1}.${BOOST_VER2}.${BOOST_VER3}"
 BUILD_DIR="./build/"
 
 # -----------------------
@@ -477,9 +477,9 @@ if [ ! -d $PROGDIR/$BOOST_DIR ]
 then
 	echo "Unpacking boost"
 	if [ "$OPTION_PROGRESS" = "yes" ] ; then
-		pv $PROGDIR/$BOOST_TAR | tar xjf - -C $PROGDIR
+		pv $PROGDIR/$BOOST_TAR | tar xzf - -C $PROGDIR
 	else
-		tar xjf $PROGDIR/$BOOST_TAR
+		tar xzf $PROGDIR/$BOOST_TAR
 	fi
 fi
 
