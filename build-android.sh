@@ -243,7 +243,7 @@ echo "Building boost version: $BOOST_VER1.$BOOST_VER2.$BOOST_VER3"
 BOOST_DOWNLOAD_LINK=https://github.com/boostorg/boost/releases/download/boost-$BOOST_VER1.$BOOST_VER2.$BOOST_VER3/boost-$BOOST_VER1.$BOOST_VER2.$BOOST_VER3.tar.gz
 #BOOST_DOWNLOAD_LINK="https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VER1.$BOOST_VER2.$BOOST_VER3/source/boost_${BOOST_VER1}_${BOOST_VER2}_${BOOST_VER3}.tar.bz2"
 BOOST_TAR="boost_${BOOST_VER1}.${BOOST_VER2}.${BOOST_VER3}.tar.gz"
-BOOST_DIR="boost_${BOOST_VER1}.${BOOST_VER2}.${BOOST_VER3}"
+BOOST_DIR="boost-${BOOST_VER1}.${BOOST_VER2}.${BOOST_VER3}"
 BUILD_DIR="./build/"
 
 # -----------------------
